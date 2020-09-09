@@ -24,6 +24,6 @@ pip install pyaudio
 
 On **Windows** you have two possibilities:
 
-**Method 1:** You can install or you install Visual Studio (https://visualstudio.microsoft.com/it/downloads/) and run `python -mpip install pyaudio`.
+Download a wheel for your system (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with pip.
 
-**Method 2:** you can download a wheel for your system (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with, for instance, `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
+For instance you have a 64bit system with python3.7 then **download** the file `PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl` and run `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
