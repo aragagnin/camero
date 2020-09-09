@@ -22,5 +22,8 @@ On **Apple OS X** use [HomeBrew](https://brew.sh/index_it):
 pip install pyaudio
 ``` 
 
-On **Windows** install or you install Visual Studio (https://visualstudio.microsoft.com/it/downloads/) and run `python -mpip install pyaudio` **or**
-you can download a wheel for your system (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with, for instance, `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
+On **Windows** you have two possibilities:
+
+You can install or you install Visual Studio (https://visualstudio.microsoft.com/it/downloads/) and run `python -mpip install pyaudio`.
+
+**Or** you can download a wheel for your system (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with, for instance, `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
