@@ -1,7 +1,7 @@
 # camero
 Camero: A minimal multi-platform, multi-audio/video inputs, and cloud-friendly webcam  security system based on motion detection
 
-## Install Video Recorder
+### Install Video Recorder
 
 
 ```bash
@@ -9,7 +9,7 @@ python -mpip install imutils
 python -mpip install opencv-python
 ```
 
-## Install Audio Recorder
+### Install Audio Recorder
 
 Note: If you do not manage to unstall [PyAudio](https://pypi.org/project/PyAudio/), Camero will still work, but it wont record audio.
 
