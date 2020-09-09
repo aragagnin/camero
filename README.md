@@ -1,15 +1,26 @@
 # camero
-Camero: A multi-platform, multi-audio/video inputs, and cloud-friendly webcam  security system based on motion detection
+Camero: A minimal multi-platform, multi-audio/video inputs, and cloud-friendly webcam  security system based on motion detection
 
-## Install 
+## Install Video Recorder
 
 
-In **Windows 10** you need to install Visual Studio (https://visualstudio.microsoft.com/it/downloads/) in order to record audio.
-
-```
-
-python -mpip install imutils
+```python -mpip install imutils
 python -mpip install opencv-python
-python -mpip install pyaudio
-
 ```
+
+## Install Audio Recorder
+
+Note: If you do not manage to unstall [PyAudio](https://pypi.org/project/PyAudio/), Camero will still work, but it wont record audio.
+
+On **Linux**:
+```sudo apt-get install python-pyaudio python3-pyaudio 
+pip install pyaudio
+```
+
+On **Apple OS X** use [HomeBrew](https://brew.sh/index_it):
+```brew install portaudio
+pip install pyaudio
+``` 
+
+On **Windows** install or you install Visual Studio (https://visualstudio.microsoft.com/it/downloads/) and run `python -mpip install pyaudio` **or**
+you can download a wheel for your system (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with, for instance, `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
