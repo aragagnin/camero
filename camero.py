@@ -60,7 +60,7 @@ def main():
             device_can_use = i in audio_device_indexes and device_input_channels>0 # check if the device is ready for input
             print("    Device id:", i, " ", device_info.get('name'), " (channels: ",device_input_channels, "). Use it?", device_can_use)
             if device_can_use:
-                stream = pyaudio_o.open(format=pyaudio.paInt16, channels=device_input_channels, rate=44100, input=True,  frames_per_buffer=1024, nput_device_index=i)
+                stream = pyaudio_o.open(format=pyaudio.paInt16, channels=device_input_channels, rate=44100, input=True,  frames_per_buffer=1024, input_device_index=i)
                 pyaudo_recorders.append({"stream":stream,"buffer":None, "i":i, "channels":device_input_channels})
     else:
         print('\nPyAudio not found. We keep going anyway.\n')
@@ -100,16 +100,23 @@ def main():
     # allow for an extra iteration where we can safely save movies
     quit_ask = False
     quit = False
+    pause = False
     while not quit:
+        key = cv2.waitKey(1) & 0xFF
+        if key == ord(" "):
+            pause = not pause
+            print('\nPause?\n',pause)
+        if pause:
+            continue
         if quit_ask:
             print('Last iteration! we will save everyting now!')
             quit = True
         # if any cam is recording then we grab audio from PyAudio
         if recording_count>0:
             for a in pyaudo_recorders:
-                print('read chunk')
+                #print('read chunk')
                 a['buffer'] = a['stream'].read(audio_chunk_size)
-                print('read chunk done' )
+                #print('read chunk done' )
         # we loop over cams and check for motion detections
         for icam in cams:
             cam = cams[icam]
@@ -119,9 +126,7 @@ def main():
                 continue
 
             frame = imutils.resize(frame, width=conf['video'].getint('width'))
-            if show_feed:
-                cv2.imshow("Security Feed %d"%icam  , frame)
-
+            
             # we check for motion as in
             # https://www.pyimagesearch.com/2015/05/25/basic-motion-detection-and-tracking-with-python-and-opencv/
             frame_gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
@@ -136,6 +141,9 @@ def main():
                 over = np.sum(frame_threshold)>threshold
                 # we check if we found motion
                 if not quit_ask and (over or (writer_time is not None and  now<=(writer_time+output_min_seconds))):
+                    if show_feed:
+                         cv2.imshow("Security Feed %d"%icam  , frame)
+
                     (h, w) = frame.shape[:2]
                     # start a new video if we didn't do it
                     if cam['writer'] is None:
@@ -199,11 +207,9 @@ def main():
                         os.system(ffmpeg_command)
             cam['frame_gray_prev'] = frame_gray
 
-            key = cv2.waitKey(1) & 0xFF
-            # if the `q` key is pressed, break from the lop
-            if key == ord("q"):
-              quit_ask = True
-
+        # if the `q` key is pressed, break from the lop
+        if key == ord("q"):
+            quit_ask = True
     cv2.destroyAllWindows()
 
     for icam in cams:
@@ -219,7 +225,7 @@ def main():
 
     print('\nAll resources deallocated.\n')
     
-if __file__=='__main__':
+if __name__=='__main__':
     try:
         main()
     except:
