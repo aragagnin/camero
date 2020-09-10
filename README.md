@@ -1,10 +1,20 @@
 # camero
 
-A minimal multi-platform, multi-audio/video inputs, and cloud-friendly webcam  security system based on motion detection
+A minimal multi-platform motion-detection based security program capable of recording multiple audio/video sources.
+
+**camero targets the DIY community who needs a security camera software and yet doesn't trust the tools available on the net.** For this reason camero has an extremely simple source code (~200 line including exaustive comments) in order for everyone with few programming skills to check it and possibly edit it. camero is vapable of having such small code base because it makes wise use of the best, reliable and well known libraries around:
+
+- Audio capture is done with [PortAudio](http://audioport.org) through [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/), while video is captured with [imutils](https://github.com/jrosebr1/imutils)
+- Motion detection is performed with [OpenCV](https://docs.opencv.org/master/d1/dfb/intro.html)
+- Audio outstream and mixing with video are done with [ffmpeg](https://ffmpeg.org)
+- Even if camero doesn't provide its own cloud uploading capabilities (e.g. to check the cam when  you are not at home), you can just save videos on a cloud-mounted filesystem or folder (e.g. Dropbox folder) to have them automatically uploaded on the net.
 
 ### Download binaries
 
-You can download the a precompiled boundle here: [camero-win10-amd64.exe](https://drive.google.com/file/d/18FpUGbcIDvspxPux_FETAQSe_cIaxVAV/view?usp=sharing)
+Binaries exist only for Windows10 intel64bit architecture: [camero-win10-amd64.exe](https://drive.google.com/file/d/18FpUGbcIDvspxPux_FETAQSe_cIaxVAV/view?usp=sharing)
+You also need a config ini file (here a sample one: [camero.ini](https://github.com/aragagnin/camero/blob/master/camero.ini))
+
+For all other acrhitectures you need to download [camero.py](https://github.com/aragagnin/camero/blob/master/camero.py) and run it with `python`. Check  sections below to see how to install the requirements. 
 
 ### Install from source
 
