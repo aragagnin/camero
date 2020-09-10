@@ -28,7 +28,7 @@ python -mpip install opencv-python
 You can also install [PyAudio](https://pypi.org/project/PyAudio/) in order to record audio. 
 The installation is not straightforward. However, if you do not manage to install it, Camero will still work, but it wont record audio.
 
-To install `pyaudio` on **Debian Linux** run:
+To install `pyaudio` on **Debian Linux** or Raspberry PI (Raspbian) os, run:
 ```bash
 sudo apt-get install python-pyaudio python3-pyaudio 
 pip install pyaudio
@@ -42,5 +42,14 @@ pip install pyaudio
 
 To install `pyaudio` on  **Windows:**
 
-Download a wheel for your system (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with pip. For instance you have a 64bit system with python3.7 then **download** the file `PyAudio‑0.2.11‑cp36‑cp36m‑win_amd64.whl` and, on the same folder run `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
+Download a pre-compiled wheel for your architecture (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with pip. For instance you have a 64bit system with python3.7 then **download** the file `PyAudio‑0.2.11‑cp36‑cp36m‑win_amd64.whl` and, on the same folder run `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
 
+### Resources
+
+Here online resources I used to produce this tool:
+
+- Basic tutorial on motion detection and camera capture: https://www.pyimagesearch.com/2015/05/25/basic-motion-detection-and-tracking-with-python-and-opencv/
+- How to record audio from pyaudio: https://stackoverflow.com/questions/36894315/how-to-select-a-specific-input-device-with-pyaudio
+- How to install PyAudio on windows: https://stackoverflow.com/questions/51992375/python-package-installation-issues-pyaudio-portaudio
+- How to deal with wave files: https://stackoverflow.com/questions/35970282/what-are-chunks-samples-and-frames-when-using-pyaudio
+- How to add a `press enter to return` command when running camero on Windows:   https://stackoverflow.com/questions/404744/determining-application-path-in-a-python-exe-generated-by-pyinstaller
