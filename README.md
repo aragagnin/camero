@@ -53,3 +53,9 @@ Here online resources I used to produce this tool:
 - How to install PyAudio on windows: https://stackoverflow.com/questions/51992375/python-package-installation-issues-pyaudio-portaudio
 - How to deal with wave files: https://stackoverflow.com/questions/35970282/what-are-chunks-samples-and-frames-when-using-pyaudio
 - How to add a `press enter to return` command when running camero on Windows:   https://stackoverflow.com/questions/404744/determining-application-path-in-a-python-exe-generated-by-pyinstaller
+
+### Todo
+
+- camero should read commands from the filesystem. For instance, if I am not at home and want to look at all cameras, I may start camero on a Dropbox folder and then remotely adds a file that sends said command
+- the config file should have hooks: e.g. send an email on motion detection
+
