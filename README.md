@@ -4,7 +4,7 @@ A minimal multi-platform, multi-audio/video inputs, and cloud-friendly webcam  s
 
 ### Download binaries
 
-You can download the 
+You can download the a precompiled boundle here: [camero-win10-amd64.exe](https://drive.google.com/file/d/18FpUGbcIDvspxPux_FETAQSe_cIaxVAV/view?usp=sharing)
 
 ### Install from source
 
