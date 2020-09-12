@@ -9,6 +9,7 @@ A minimal multi-platform motion-detection based security program capable of reco
 - Audio outstream and mixing with video are done with [ffmpeg](https://ffmpeg.org)
 - Even if camero doesn't provide its own cloud uploading capabilities (e.g. to check the cam when  you are not at home), you can just save videos on a cloud-mounted filesystem or folder (e.g. Dropbox folder) to have them automatically uploaded on the net.
 
+
 ### Download binaries
 
 Binaries are produced with [pyinstaller](https://www.pyinstaller.org) exist only for Windows10 intel64bit architecture: [camero-rc29b962-win-amd64.exe](https://drive.google.com/file/d/1wMkS8kcDpPYoT-4IEiH6XBLqGXJE6zCD/view?usp=sharing)
@@ -43,6 +44,11 @@ pip install pyaudio
 To install `pyaudio` on  **Windows:**
 
 Download a pre-compiled wheel for your architecture (`pXX` is the python version) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and install it with pip. For instance you have a 64bit system with python3.7 then **download** the file `PyAudio‑0.2.11‑cp36‑cp36m‑win_amd64.whl` and, on the same folder run `pip install PyAudio‑0.2.11‑cp39‑cp39‑win_amd64.whl`.
+
+### Configure camero
+
+By default you do need to have `camero.ini` file in the same path where you execute it.
+You can find a default and documented version of the config file in this repository [camero.ini](https://github.com/aragagnin/camero/blob/master/camero.ini).
 
 ### Resources
 
