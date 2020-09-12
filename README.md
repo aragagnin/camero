@@ -11,7 +11,7 @@ A minimal multi-platform motion-detection based security program capable of reco
 
 ### Download binaries
 
-Binaries exist only for Windows10 intel64bit architecture: [camero-win10-amd64.exe](https://drive.google.com/file/d/18FpUGbcIDvspxPux_FETAQSe_cIaxVAV/view?usp=sharing)
+Binaries exist only for Windows10 intel64bit architecture: [camero-rc29b962-win-amd64.exe](https://drive.google.com/file/d/1wMkS8kcDpPYoT-4IEiH6XBLqGXJE6zCD/view?usp=sharing)
 You also need a config ini file (here a sample one: [camero.ini](https://github.com/aragagnin/camero/blob/master/camero.ini))
 
 For all other acrhitectures you need to download [camero.py](https://github.com/aragagnin/camero/blob/master/camero.py) and run it with `python`. Check  sections below to see how to install the requirements. 
