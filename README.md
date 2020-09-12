@@ -2,7 +2,7 @@
 
 A minimal multi-platform motion-detection based security program capable of recording multiple audio/video sources.
 
-**camero targets the DIY community who needs a security camera software and yet doesn't trust the tools available on the net.** For this reason camero has an extremely simple source code (~200 line including exaustive comments) in order for everyone with few programming skills to check it and possibly edit it. camero is vapable of having such small code base because it makes wise use of the best, reliable and well known libraries around:
+**camero  targets the DIY enthusiasts who seek a minimal, open-source, extensively-commented, security camera software and yet doesn't trust the tools available on the net.** For this reason camero has an extremely simple source code (~200 line including exaustive comments) in order for everyone with few programming skills to check it and possibly edit it. camero is vapable of having such small code base because it makes wise use of the best, reliable and well known libraries around:
 
 - Audio capture is done with [PortAudio](http://audioport.org) through [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/), while video is captured with [imutils](https://github.com/jrosebr1/imutils)
 - Motion detection is performed with [OpenCV](https://docs.opencv.org/master/d1/dfb/intro.html)
@@ -11,7 +11,7 @@ A minimal multi-platform motion-detection based security program capable of reco
 
 ### Download binaries
 
-Binaries exist only for Windows10 intel64bit architecture: [camero-rc29b962-win-amd64.exe](https://drive.google.com/file/d/1wMkS8kcDpPYoT-4IEiH6XBLqGXJE6zCD/view?usp=sharing)
+Binaries are produced with [pyinstaller](https://www.pyinstaller.org) exist only for Windows10 intel64bit architecture: [camero-rc29b962-win-amd64.exe](https://drive.google.com/file/d/1wMkS8kcDpPYoT-4IEiH6XBLqGXJE6zCD/view?usp=sharing)
 You also need a config ini file (here a sample one: [camero.ini](https://github.com/aragagnin/camero/blob/master/camero.ini))
 
 For all other acrhitectures you need to download [camero.py](https://github.com/aragagnin/camero/blob/master/camero.py) and run it with `python`. Check  sections below to see how to install the requirements. 
@@ -28,7 +28,7 @@ python -mpip install opencv-python
 You can also install [PyAudio](https://pypi.org/project/PyAudio/) in order to record audio. 
 The installation is not straightforward. However, if you do not manage to install it, Camero will still work, but it wont record audio.
 
-To install `pyaudio` on **Debian Linux** or Raspberry PI (Raspbian) os, run:
+To install `pyaudio` on **Debian Linux** or **Raspberry PI (Raspbian)** OS, run:
 ```bash
 sudo apt-get install python-pyaudio python3-pyaudio 
 pip install pyaudio
