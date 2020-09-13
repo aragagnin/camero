@@ -2,13 +2,15 @@
 
 A minimal multi-platform motion-detection based security program capable of recording multiple audio/video sources.
 
-**camero  targets the DIY enthusiasts who seek a minimal, open-source, extensively-commented, security camera software and yet doesn't trust the tools available on the net.** For this reason camero has an extremely simple source code (~200 line including exaustive comments) in order for everyone with few programming skills to check it and possibly edit it. camero is vapable of having such small code base because it makes wise use of the best, reliable and well known libraries around:
+camero  can turn some old laptops (or RaspberryPi) and webcams into a motion-detection security systems. **camero targets DIY enthusiasts who seek a minimal, open-source, extensively-commented, security camera software and yet doesn't trust the tools available on the net.** For this reason camero has an extremely simple source code (~200 line including exaustive comments) in order for everyone with few programming skills to check it and possibly edit it. camero is vapable of having such small code base because it makes wise use of the best, reliable and well known libraries around:
 
 - Audio capture is done with [PortAudio](http://audioport.org) through [PyAudio](https://people.csail.mit.edu/hubert/pyaudio/), while video is captured with [imutils](https://github.com/jrosebr1/imutils)
 - Motion detection is performed with [OpenCV](https://docs.opencv.org/master/d1/dfb/intro.html)
 - Audio outstream and mixing with video are done with [ffmpeg](https://ffmpeg.org)
 - Even if camero doesn't provide its own cloud uploading capabilities (e.g. to check the cam when  you are not at home), you can just save videos on a cloud-mounted filesystem or folder (e.g. Dropbox folder) to have them automatically uploaded on the net.
 
+Here below a screenshot of its miniml (almnost un-existent) interface:
+![camero motion detection screenshot](https://imgur.com/OnMJ6Z2.png)
 
 ### Download binaries
 
